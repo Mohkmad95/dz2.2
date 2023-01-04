@@ -1,10 +1,13 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(stroll(31, 28));
-        System.out.println(stroll(12, 28));
-        System.out.println(stroll(50,-12));
-        System.out.println(stroll(25,65));
-        System.out.println(stroll(32,30));
+        stroll(31, 28);
+        stroll(12, 26);
+        stroll(50,-12);
+        stroll(25,65);
+        stroll(32,30);
+        stroll(generateRandomAge(),30);
 
     }
     public static String stroll(int age, int temperature){
@@ -17,6 +20,14 @@ public class Main {
             return "Сиди дома и пей чай";
         }else {
             return "Сиди дома и пей чай ЖЫЫ ЕССТЬ"; // если ты читаешь этот код,знай что ты красавчик
+
         }
     }
+    public static int generateRandomAge(){
+        Random random= new Random();
+        int age = random.nextInt(1,79);
+        return age;
+    }
 }
+
+
